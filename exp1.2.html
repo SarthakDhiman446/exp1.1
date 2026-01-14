@@ -38,5 +38,17 @@ else{
 }
 document.getElementById('amount').value="";
     }
+    function withdraw(){
+        let paisa = document.getElementById('amount').value;
+        if(paisa>0){
+    Balance = Balance - Number(paisa);
+    document.getElementById('balance').innerText = Balance;
+    document.getElementById('message').innerText="Paisa gya";
+}
+else{
+    document.getElementById('message').innerText= "Enter a Valid value";
+    }
+}
 </script>
+
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bank UI</title>
+    <style>
+        #b1{
+            background-color:red;
+            color:white;
+        }
+        #b2{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Balance:$ <span id ="balance"></span></h2>
+    <label for = "amount">Amount</label><br><br>
+    <input type ="number" placeholder="Paisa enter Karo"id ="amount">
+    <br><br>
+    <button id = "b1" onclick="deposit()">Deposit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id = "b2"onclick="withdraw()">Withdraw</button>
+    <p id ="message"></p>
+</body>
+<script>
+    let Balance = 0;
+    function deposit(){
+let paisa = document.getElementById('amount').value;
+if(paisa>0){
+    Balance = Balance + Number(paisa);
+    document.getElementById('balance').innerText = Balance;
+    document.getElementById('message').innerText="Paisa prapth";
+}
+else{
+    document.getElementById('message').innerText= "Enter a Value";
+}
+document.getElementById('amount').value="";
+    }
+</script>
+</html>
